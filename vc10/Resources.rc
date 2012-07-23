@@ -1,0 +1,11 @@
+#include "Resources.h"
+
+ID ICON "cinder_app_icon.ico"
+	
+RES_TEST					IMAGE		"..\\resources\\test.jpg"
+RES_POINT_SPRITE			IMAGE		"..\\resources\\images\\pointsprite.png"
+RES_VERT_PASSTHRU			GLSL		"..\\resources\\shaders\\passthru.vert"
+RES_FRAG_VELOCITYSTEP		GLSL		"..\\resources\\shaders\\velocitystep.frag"
+RES_FRAG_POSITIONSTEP		GLSL		"..\\resources\\shaders\\positionstep.frag"
+RES_VERT_TEX_TO_VERT		GLSL		"..\\resources\\shaders\\tex_to_vertex.vert"
+RES_FRAG_PARTICLES			GLSL		"..\\resources\\shaders\\particle.frag"
