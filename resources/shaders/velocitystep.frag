@@ -1,4 +1,5 @@
 uniform sampler2D velocitiesTexture;
+uniform float elapsedTime;
 
 void main()
 {

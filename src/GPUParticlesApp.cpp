@@ -12,7 +12,7 @@
 
 #include "Resources.h"
 
-#define SIDE 300
+#define SIDE 150
 
 using namespace ci;
 using namespace ci::app;
@@ -37,6 +37,8 @@ private:
 	gl::GlslProg mPositionShader;
 	Rectf mRect;
 
+	float mElapsedTime;
+
 	int mDrawCycle;
 };
 
@@ -48,6 +50,7 @@ void GPUParticlesApp::prepareSettings( Settings* settings)
 void GPUParticlesApp::setup()
 {
 	mDrawCycle = 0;
+	mElapsedTime = 0.0;
 
 	// Initialize positions and velocities textures
 	int h = SIDE;
@@ -57,10 +60,10 @@ void GPUParticlesApp::setup()
 		
 	// Initialize the framebuffer objects
 	gl::Fbo::Format fboTexFormat;
-	fboTexFormat.setColorInternalFormat(GL_R32F);
+	fboTexFormat.setColorInternalFormat(GL_RGBA32F);
 	
 	gl::Texture::Format texFormat;
-	texFormat.setInternalFormat(GL_R32F);
+	texFormat.setInternalFormat(GL_RGBA32F);
 
 	gl::setMatricesWindow(this->getWindowSize(), false);
 	for(int i = 0; i < 4; i++)
@@ -71,15 +74,17 @@ void GPUParticlesApp::setup()
 			while( iter.pixel() ) {
 				if (i == 0 || i == 1)
 				{
-					iter.r() = Rand::randFloat(-1.0,1.0);
-					iter.g() = Rand::randFloat(-1.0,1.0);
+					// Velocities
+					iter.r() = Rand::randFloat(0.0,1.0);
+					iter.g() = Rand::randFloat(0.0,1.0);
 					iter.b() = 0;
 					iter.a() = 1;
 				}
 				else
 				{
-					iter.r() = 0;
-					iter.g() = 0;
+					// Positions
+					iter.r() = .5;
+					iter.g() = .5;
 					iter.b() = 0;
 					iter.a() = 1;
 				}
@@ -156,6 +161,9 @@ void GPUParticlesApp::draw()
 {
 	gl::clear( Color( 0, 0, 0 ) ); 
 
+	float deltaTime = this->getElapsedSeconds() - mElapsedTime;
+	mElapsedTime = this->getElapsedSeconds();
+
 	glEnable(GL_TEXTURE_2D);
 
 	gl::setMatricesWindow(this->getWindowSize(), false);
@@ -171,6 +179,7 @@ void GPUParticlesApp::draw()
 		fboVelocitySource->getTexture().bind(0);
 		mVelocityShader.bind();
 		mVelocityShader.uniform("velocitiesTexture", 0);
+		mVelocityShader.uniform("elapsedTime", mElapsedTime);
 		gl::drawSolidRect(mRect);
 		mVelocityShader.unbind();
 		fboVelocitySource->getTexture().unbind();
@@ -178,8 +187,7 @@ void GPUParticlesApp::draw()
 
 	// DEBUG: To draw the velocities texture
 	//gl::setMatricesWindow(this->getWindowSize(), true);
-	//gl::draw(fboPositionTarget->getTexture());
-	// return;
+	//gl::draw(fboVelocityTarget->getTexture());
 
 	fboPositionTarget->bindFramebuffer();
 		gl::clear( Color( 0, 0, 0) );
@@ -194,13 +202,11 @@ void GPUParticlesApp::draw()
 		fboPositionSource->getTexture().unbind();
 	fboPositionTarget->unbindFramebuffer();
 
-	// DEBUG: To draw the velocities texture
+	// DEBUG: To draw the positions texture
 	gl::setMatricesWindow(this->getWindowSize(), true);
-	fboPositionTarget->bindTexture(0, 0);
 	gl::draw(fboPositionTarget->getTexture());
-	fboPositionTarget->unbindTexture();
+	return;
 
-	
 	gl::setMatricesWindow(this->getWindowSize(), true);
 
 	// draw particles with updated position data

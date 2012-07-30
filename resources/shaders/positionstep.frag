@@ -1,5 +1,6 @@
 uniform sampler2D velocitiesTexture;
 uniform sampler2D positionsTexture;
+uniform float deltaTime;
 
 void main()
 {

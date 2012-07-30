@@ -1,11 +1,14 @@
-﻿Build started 7/22/2012 10:34:54 PM.
+﻿Build started 7/28/2012 12:27:48 PM.
      1>Project "C:\Users\Patrick Lynch\CinderProjects\GPUParticles\vc10\GPUParticles.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\GPUParticles.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\include /I..\..\cinder_0.8.4_vc2010\include /I..\..\cinder_0.8.4_vc2010\boost /Zi /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\GPUParticlesApp.cpp
+         GPUParticlesApp.cpp
+     1>..\src\GPUParticlesApp.cpp(164): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>..\src\GPUParticlesApp.cpp(165): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
        ResourceCompile:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /I..\..\cinder_0.8.4_vc2010\include /I..\include /nologo /fo"Debug\Resources.res" Resources.rc 
+         All outputs are up-to-date.
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -25,4 +28,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.47
+Time Elapsed 00:00:04.22
