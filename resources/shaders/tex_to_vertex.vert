@@ -1,12 +1,14 @@
 uniform sampler2D positionMap;
+uniform mat4 modelviewMatrix;
+uniform mat4 projectionMatrix;
+uniform vec2 windowSize;
 
-varying vec2 index;
+attribute vec2 index;
 
 void main()
 {
     gl_PointSize = 15.0;
 	gl_TexCoord[0] = gl_MultiTexCoord0;
-	index = gl_TexCoord[0].st;
-	vec4 pos = texture2D(positionMap, index) * 2.0 - vec4(1, 1, 0, 0);
-	gl_Position	= pos * 2.0;
+	vec2 pos = texture2D(positionMap, index).xy * windowSize;
+	gl_Position	= modelviewMatrix * projectionMatrix * vec4( gl_Vertex + vec4(pos.xy, 0.0, 0.0) );
 }

@@ -1,0 +1,193 @@
+TGPUParticles
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/Info.plist Info.plist
+cCpResource CinderApp.icns ./build/Debug/GPUParticles.app/Contents/Resources/CinderApp.icns
+cProcessPCH++ /var/folders/hz/0xx9203d5t93926w7dp8lytm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/GPUParticles_Prefix-cuzwcezlbsifvgbpwhedjqsdnvyt/GPUParticles_Prefix.pch.pth GPUParticles_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC ./build/GPUParticles.build/Debug/GPUParticles.build/Objects-normal/i386/GPUParticlesApp.o /Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk
+c000000004F90F72900000000000000CC
+t1334900521
+s204
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
+c000000005012DECE0000000000002400
+t1343413966
+s9216
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000005012DECE0000000000023FF4
+t1343413966
+s147444
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AudioUnit.framework/AudioUnit
+c000000005012DECE00000000000061F4
+t1343413966
+s25076
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c000000005012DECE00000000000001E5
+t1343413966
+s485
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c000000005012DECE000000000000E8A8
+t1343413966
+s59560
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c000000005012D5C900000000000069F0
+t1343411657
+s27120
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000005012D5C90000000000006730
+t1343411657
+s26416
+
+N/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+c000000005012D5CC0000000000081CB0
+t1343411660
+s531632
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c000000005012D5D4000000000002DAF0
+t1343411668
+s187120
+
+N/System/Library/Frameworks/QTKit.framework/QTKit
+c000000005012D5D700000000004A2D90
+t1343411671
+s4861328
+
+N/System/Library/Frameworks/QuickTime.framework/QuickTime
+c000000005012D6BA0000000000322E20
+t1343411898
+s3288608
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp
+c0000000050167059000000000000192A
+t1343647833
+s6442
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app
+t2
+s0
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/Info.plist
+t2
+s0
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/MacOS/GPUParticles
+t2
+s0
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/Resources/CinderApp.icns
+t2
+s0
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/Objects-normal/i386/GPUParticles.LinkFileList
+c00000000501679140000000000000089
+t1343650068
+s137
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/Objects-normal/i386/GPUParticlesApp.o
+t2
+s0
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/CinderApp.icns
+c00000000501678B5000000000001BEB5
+t1343649973
+s114357
+
+N/Users/pdlynch/Development/GPUParticles2/xcode/GPUParticles_Prefix.pch
+c00000000501678B50000000000000093
+t1343649973
+s147
+i<Cocoa/Cocoa.h>
+
+N/var/folders/hz/0xx9203d5t93926w7dp8lytm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/GPUParticles_Prefix-cuzwcezlbsifvgbpwhedjqsdnvyt/GPUParticles_Prefix.pch.pth
+t2
+s0
+
+NInfo.plist
+c00000000501678B50000000000000352
+t1343649973
+s850
+
+CBuild AST from /Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies1041ad94b0c6b541^2ecab094b0c6b541^---0#1#0#--18"Check dependencies36"B5165949-93B6-41A8-AA52-F8C7BC2ED3A8-
+
+CCompileC ./build/GPUParticles.build/Debug/GPUParticles.build/Objects-normal/i386/GPUParticlesApp.o /Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s365342868.740098
+e365342871.958586
+r0
+xCompileC
+x./build/GPUParticles.build/Debug/GPUParticles.build/Objects-normal/i386/GPUParticlesApp.o
+x/Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp:63:38: error: use of undeclared identifier 'GL_RGBA32F'
+o        fboTexFormat.setColorInternalFormat(GL_RGBA32F);
+o                                            ^
+o/Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp:66:30: error: use of undeclared identifier 'GL_RGBA32F'
+o        texFormat.setInternalFormat(GL_RGBA32F);
+o                                    ^
+o/Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp:164:8: warning: unused variable 'deltaTime' [-Wunused-variable]
+o        float deltaTime = this->getElapsedSeconds() - mElapsedTime;
+o              ^
+o1 warning and 2 errors generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp378dbd94b0c6b541^7364f597b0c6b541^-706"/Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp:63:38: error: use of undeclared identifier 'GL_RGBA32F'        fboTexFormat.setColorInternalFormat(GL_RGBA32F);                                            ^/Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp:66:30: error: use of undeclared identifier 'GL_RGBA32F'        texFormat.setInternalFormat(GL_RGBA32F);                                    ^/Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp:164:8: warning: unused variable 'deltaTime' [-Wunused-variable]        float deltaTime = this->getElapsedSeconds() - mElapsedTime;              ^1 warning and 2 errors generated.3(36%IDEClangDiagnosticActivityLogMessage2@41"Use of undeclared identifier 'GL_RGBA32F'-365342871#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@80"file://localhost/Users/pdlynch/Development/GPUParticles2/src/GPUParticlesApp.cpp0000000000000000^62#37#62#37#1272#0#14"Semantic Issue--2@41"Use of undeclared identifier 'GL_RGBA32F'-365342871#18446744073709551615#0#-2#27"com.apple.dt.IDE.diagnostic3@80"file://localhost/Users/pdlynch/Development/GPUParticles2/src/GPUParticlesApp.cpp0000000000000000^65#29#65#29#1348#0#14"Semantic Issue--2@27"Unused variable 'deltaTime'-365342871#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic3@80"file://localhost/Users/pdlynch/Development/GPUParticles2/src/GPUParticlesApp.cpp0000000000000000^163#7#163#7#4003#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@89"file://localhost/Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp0000000000000000^2827"CompileC ./build/GPUParticles.build/Debug/GPUParticles.build/Objects-normal/i386/GPUParticlesApp.o ../src/GPUParticlesApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/pdlynch/Development/GPUParticles2/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -Wno-sign-conversion -iquote /Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/GPUParticles-generated-files.hmap -I/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/GPUParticles-own-target-headers.hmap -I/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/GPUParticles-all-target-headers.hmap -iquote /Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/GPUParticles-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/pdlynch/Development/GPUParticles2/xcode/build/Debug/include -I../../cinder/boost -I/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/DerivedSources/i386 -I/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/DerivedSources -F/Users/pdlynch/Development/GPUParticles2/xcode/build/Debug -include /var/folders/hz/0xx9203d5t93926w7dp8lytm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/GPUParticles_Prefix-cuzwcezlbsifvgbpwhedjqsdnvyt/GPUParticles_Prefix.pch -MMD -MT dependencies -MF /Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/Objects-normal/i386/GPUParticlesApp.d --serialize-diagnostics /Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/Objects-normal/i386/GPUParticlesApp.dia -c /Users/pdlynch/Development/GPUParticles2/xcode/../src/GPUParticlesApp.cpp -o /Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/Objects-normal/i386/GPUParticlesApp.o36"C87EDB0F-A43B-49B2-9093-F8100ED40CB6-
+
+CCpResource CinderApp.icns ./build/Debug/GPUParticles.app/Contents/Resources/CinderApp.icns
+s365342868.707645
+e365342868.713355
+r1
+xCpResource
+xCinderApp.icns
+x./build/Debug/GPUParticles.app/Contents/Resources/CinderApp.icns
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection69"Copy ./build/Debug/GPUParticles.app/Contents/Resources/CinderApp.icns0135b594b0c6b541^d49eb694b0c6b541^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/Resources/CinderApp.icns000000000080d041^416"CpResource CinderApp.icns ./build/Debug/GPUParticles.app/Contents/Resources/CinderApp.icns    cd /Users/pdlynch/Development/GPUParticles2/xcode    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/pdlynch/Development/GPUParticles2/xcode/CinderApp.icns /Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/Resources36"E210F332-10AA-4A97-BB57-EAB58121EB7C-
+
+CLd /Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/MacOS/GPUParticles normal i386
+r0
+
+CProcessInfoPlistFile /Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/Info.plist Info.plist
+s365342868.694189
+e365342868.696636
+r1
+xProcessInfoPlistFile
+x/Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/Info.plist
+xInfo.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Process Info.plist48c3b194b0c6b541^9a7db294b0c6b541^---0#0#0#-19%DVTDocumentLocation2@73"file://localhost/Users/pdlynch/Development/GPUParticles2/xcode/Info.plist0000000000000000^423"ProcessInfoPlistFile ./build/Debug/GPUParticles.app/Contents/Info.plist Info.plist    cd /Users/pdlynch/Development/GPUParticles2/xcode    builtin-infoPlistUtility Info.plist -genpkginfo /Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app/Contents/Info.plist36"10EE8E1A-6BE5-47D7-AD54-1B81F932B644-
+
+CProcessPCH++ /Users/pdlynch/Library/Developer/Xcode/DerivedData/GPUParticles-fjqtwqksqkljkebhxggbxjitwwsl/Index/PrecompiledHeaders/GPUParticles_Prefix-eukhfcbqhxolfyfwpuvclfaxrvur_ast/GPUParticles_Prefix.pch.pth GPUParticles_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CProcessPCH++ /var/folders/hz/0xx9203d5t93926w7dp8lytm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/GPUParticles_Prefix-cuzwcezlbsifvgbpwhedjqsdnvyt/GPUParticles_Prefix.pch.pth GPUParticles_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s365342868.720943
+e365342868.733199
+r1
+xProcessPCH++
+x/var/folders/hz/0xx9203d5t93926w7dp8lytm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/GPUParticles_Prefix-cuzwcezlbsifvgbpwhedjqsdnvyt/GPUParticles_Prefix.pch.pth
+xGPUParticles_Prefix.pch
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection34"Precompile GPUParticles_Prefix.pch7fa4b894b0c6b541^10b3bb94b0c6b541^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/pdlynch/Development/GPUParticles2/xcode/GPUParticles_Prefix.pch0000000000000000^2835"ProcessPCH++ /var/folders/hz/0xx9203d5t93926w7dp8lytm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/GPUParticles_Prefix-cuzwcezlbsifvgbpwhedjqsdnvyt/GPUParticles_Prefix.pch.pth GPUParticles_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/pdlynch/Development/GPUParticles2/xcode    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.7 -g -Wno-sign-conversion -iquote /Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/GPUParticles-generated-files.hmap -I/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/GPUParticles-own-target-headers.hmap -I/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/GPUParticles-all-target-headers.hmap -iquote /Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/GPUParticles-project-headers.hmap -iquote../../cinder/include -iquote../include -I/Users/pdlynch/Development/GPUParticles2/xcode/build/Debug/include -I../../cinder/boost -I/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/DerivedSources/i386 -I/Users/pdlynch/Development/GPUParticles2/xcode/./build/GPUParticles.build/Debug/GPUParticles.build/DerivedSources -F/Users/pdlynch/Development/GPUParticles2/xcode/build/Debug --serialize-diagnostics /var/folders/hz/0xx9203d5t93926w7dp8lytm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/GPUParticles_Prefix-cuzwcezlbsifvgbpwhedjqsdnvyt/GPUParticles_Prefix.pch.dia -c /Users/pdlynch/Development/GPUParticles2/xcode/GPUParticles_Prefix.pch -o /var/folders/hz/0xx9203d5t93926w7dp8lytm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/GPUParticles_Prefix-cuzwcezlbsifvgbpwhedjqsdnvyt/GPUParticles_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/hz/0xx9203d5t93926w7dp8lytm0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/GPUParticles_Prefix-cuzwcezlbsifvgbpwhedjqsdnvyt/GPUParticles_Prefix.pch.d36"50A43677-B0DB-4AA4-BDC8-7EC6CA253199-
+
+CTouch /Users/pdlynch/Development/GPUParticles2/xcode/./build/Debug/GPUParticles.app
+r0
+

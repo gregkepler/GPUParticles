@@ -38,7 +38,9 @@ private:
 	Rectf mRect;
 
 	float mElapsedTime;
-
+    float* mPoints;
+    float* mIndices;
+    int mMaxParticles;
 	int mDrawCycle;
 };
 
@@ -57,15 +59,18 @@ void GPUParticlesApp::setup()
 	int w = SIDE;
 	mRect = Rectf(0.0,0.0,(float)w,(float)h);
 	Area area( 0, 0, w, h );
+    
+    mMaxParticles = SIDE * SIDE;
 		
 	// Initialize the framebuffer objects
 	gl::Fbo::Format fboTexFormat;
-	fboTexFormat.setColorInternalFormat(GL_RGBA32F);
+	fboTexFormat.setColorInternalFormat(GL_RGBA);
 	
 	gl::Texture::Format texFormat;
-	texFormat.setInternalFormat(GL_RGBA32F);
+	texFormat.setInternalFormat(GL_RGBA);
 
 	gl::setMatricesWindow(this->getWindowSize(), false);
+    mFbos.reserve(4);
 	for(int i = 0; i < 4; i++)
 	{
 		Surface32f surface(w, h, false);
@@ -75,18 +80,18 @@ void GPUParticlesApp::setup()
 				if (i == 0 || i == 1)
 				{
 					// Velocities
-					iter.r() = Rand::randFloat(0.0,1.0);
-					iter.g() = Rand::randFloat(0.0,1.0);
-					iter.b() = 0;
-					iter.a() = 1;
+					iter.r() = 0.5f + Rand::randFloat(-0.01f, 0.01f);
+					iter.g() = 0.5f + Rand::randFloat(-0.01f, 0.01f);
+					iter.b() = 0.0f;
+					iter.a() = 1.0f;
 				}
 				else
 				{
 					// Positions
-					iter.r() = .5;
-					iter.g() = .5;
-					iter.b() = 0;
-					iter.a() = 1;
+					iter.r() = 0.5f;
+					iter.g() = 0.5f;
+					iter.b() = 0.0f;
+					iter.a() = 1.0f;
 				}
 			}
 		}
@@ -98,7 +103,7 @@ void GPUParticlesApp::setup()
 		fbo->bindFramebuffer();
 		gl::draw(startTexture);
 		fbo->unbindFramebuffer();
-		mFbos.push_back(fbo);
+		mFbos[i] = fbo;
 	}
 
 	// Load the shaders
@@ -112,12 +117,9 @@ void GPUParticlesApp::setup()
 
 	mParticleShader = gl::GlslProg(
 		loadResource( "tex_to_vertex.vert",		RES_VERT_TEX_TO_VERT,		"GLSL"),
-		loadResource( "particles.frag",			RES_FRAG_PARTICLES,			"GLSL" ));
+		loadResource( "particle.frag",			RES_FRAG_PARTICLES,			"GLSL" ));
 
-	// Initialize VBO for point sprite vertices
-	int totalVertices = SIDE * SIDE;
-
-	vector<Vec2f> texCoords;
+	/*vector<Vec2f> texCoords;
 	vector<Vec3f> vCoords, normCoords;
 	vector<uint32_t> indices;
 
@@ -126,6 +128,9 @@ void GPUParticlesApp::setup()
 	layout.setStaticPositions();
 	layout.setStaticTexCoords2d();
 	layout.setStaticNormals();
+    
+	// Initialize VBO for point sprite vertices
+	int totalVertices = SIDE * SIDE;
 
 	mVboMesh = gl::VboMesh( totalVertices, totalVertices, layout, GL_POINTS); // GL_LINES GL_QUADS
 	for( int x = 0; x < SIDE; ++x ) {
@@ -140,7 +145,28 @@ void GPUParticlesApp::setup()
 	mVboMesh.bufferIndices( indices );
 	mVboMesh.bufferTexCoords2d( 0, texCoords );
 	mVboMesh.bufferPositions( vCoords );
-	mVboMesh.bufferNormals( normCoords );
+	mVboMesh.bufferNormals( normCoords );*/
+    
+    // Vertex array
+    int numVertices = this->mMaxParticles * 2;
+    mPoints = (float*) calloc(sizeof(float), numVertices);
+    /*for(int i = 0; i < numVertices-1; i+=2) {
+        mPoints[i] = 100.0f;
+        mPoints[i+1] = 200.0f;
+    }*/
+    
+    mIndices = (float*) calloc(sizeof(float), numVertices);
+    int i = 0;
+	for( int x = 0; x < SIDE; ++x ) {
+		for( int y = 0; y < SIDE; ++y ) {
+            mIndices[i] = (float)x / (float)SIDE;
+            mIndices[i+1] = (float)y / (float)SIDE;
+            console() << "[ " << x << ", " << y << " ]" << std::endl;
+            i+=2;
+        }
+    }
+
+    
 
 	// Point sprite texture
 	mSpriteTexture = gl::Texture( loadImage ( loadResource( "pointsprite.png", RES_POINT_SPRITE, "IMAGE") ) );
@@ -188,6 +214,7 @@ void GPUParticlesApp::draw()
 	// DEBUG: To draw the velocities texture
 	//gl::setMatricesWindow(this->getWindowSize(), true);
 	//gl::draw(fboVelocityTarget->getTexture());
+    //fboVelocityTarget->getTexture().unbind();
 
 	fboPositionTarget->bindFramebuffer();
 		gl::clear( Color( 0, 0, 0) );
@@ -205,33 +232,44 @@ void GPUParticlesApp::draw()
 	// DEBUG: To draw the positions texture
 	gl::setMatricesWindow(this->getWindowSize(), true);
 	gl::draw(fboPositionTarget->getTexture());
-	return;
-
-	gl::setMatricesWindow(this->getWindowSize(), true);
-
+    
 	// draw particles with updated position data
+	gl::setMatricesWindow(this->getWindowSize(), true);
+    
 	glEnable(GL_BLEND);
 	glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
-	glEnable(GL_POINT_SPRITE);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+    glEnable(GL_POINT_SPRITE);
+    glTexEnvi(GL_POINT_SPRITE, GL_COORD_REPLACE, GL_TRUE);
 
 	mParticleShader.bind();
 	fboPositionTarget->getTexture().bind(0);
 	mSpriteTexture.bind(1);
-
+    
 	mParticleShader.uniform("positionMap", 0);
 	mParticleShader.uniform("spriteTexture", 1);
-
-	gl::draw( mVboMesh );
-
+	mParticleShader.uniform("modelviewMatrix", gl::getModelView());
+	mParticleShader.uniform("projectionMatrix", gl::getProjection());
+    mParticleShader.uniform("windowSize", Vec2f(this->getWindowSize().x, this->getWindowSize().y));
+    
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glVertexPointer(2, GL_FLOAT, 0, mPoints);
+    glDrawArrays(GL_POINTS, 0, mMaxParticles * 2.0);
+    
+    GLint loc = mParticleShader.getAttribLocation("index");
+    glEnableClientState(GL_VERTEX_ATTRIB_ARRAY_POINTER);
+    glEnableVertexAttribArray(loc);
+    glVertexAttribPointer(loc, 2, GL_FLOAT, GL_FALSE, 2, mIndices);
+    
 	mSpriteTexture.unbind();
 	fboPositionTarget->getTexture().unbind();
 	mParticleShader.unbind();
-	
+    
+    glDisable(GL_VERTEX_ATTRIB_ARRAY_POINTER);
 	glDisable(GL_POINT_SPRITE);
 	glDisable(GL_BLEND);
 	glDisable(GL_VERTEX_PROGRAM_POINT_SIZE);
 	glDisable(GL_TEXTURE_2D);
+    
 }
 
 CINDER_APP_BASIC( GPUParticlesApp, RendererGl )
